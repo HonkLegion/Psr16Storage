@@ -54,5 +54,14 @@ jobs:
           name: coverage-php-${{ matrix.php-version }}
           path: coverage.xml
 
+      - name: Upload coverage to Coveralls
+        if: ${{ matrix.coverage && github.event_name == 'push' && github.ref_name == github.event.repository.default_branch }}
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          coveralls-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          file: coverage.xml
+          format: clover
+
       - name: Run coding style check
         run: composer phpcs
