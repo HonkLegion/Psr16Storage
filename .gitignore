@@ -1,0 +1,12 @@
+# Editor
+/.idea
+
+# Tests
+/tests/temp
+
+# Composer
+/vendor
+/composer.lock
+
+# Temp
+.phpunit.cache
