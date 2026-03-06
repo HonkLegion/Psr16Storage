@@ -3,7 +3,7 @@
 	"type": "library",
 	"description": "Nette PSR16 storage adapter",
 	"keywords": ["nette", "cache", "storage", "psr16"],
-	"license": ["MIT license"],
+	"license": ["MIT"],
 	"authors": [
 		{
 			"name": "Radovan Kepák",
