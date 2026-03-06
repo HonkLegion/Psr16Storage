@@ -1,0 +1,51 @@
+{
+	"name": "honklegion/psr16storage",
+	"type": "library",
+	"description": "Nette PSR16 storage adapter",
+	"keywords": ["nette", "cache", "storage", "psr16"],
+	"license": ["MIT license"],
+	"authors": [
+		{
+			"name": "Radovan Kepák",
+			"email": "radovan.kepak@honklegion.cz",
+			"homepage": "https://honklegion.cz/"
+		}
+	],
+	"require": {
+		"php": ">=8.2 <8.6",
+		"nette/caching": "^3.2",
+		"psr/simple-cache": "^1.0|^3.0"
+	},
+	"require-dev": {
+		"phpstan/phpstan-nette": "^2.0",
+		"roave/security-advisories": "dev-latest",
+		"phpstan/phpstan": "^2.0",
+		"php-parallel-lint/php-parallel-lint": "^1.2",
+		"friendsofphp/php-cs-fixer": "^3.75"
+	},
+	"minimum-stability": "stable",
+	"support": {
+		"email": "radovan.kepak@honklegion.cz",
+		"issues": "https://github.com/HonkLegion/Psr16Storage/issues"
+	},
+	"autoload": {
+		"psr-4": {
+			"HonkLegion\\Psr16Storage\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Psr16Storage\\": "tests/"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.0-dev"
+		}
+	},
+	"scripts": {
+		"phpstan": "phpstan analyse --level 8 --no-progress ./src",
+		"phpcs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer check",
+		"phpcs-fix": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix"
+	}
+}
